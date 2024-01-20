@@ -1,0 +1,318 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+        }
+
+        .main-card {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 20px;
+            paddig-top: 5px;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px  #ddd;
+            
+        }
+
+        th {
+            background-color:  rgb(176, 176, 176);
+            color: rgb(255, 255, 255);
+        }
+        
+        td {
+            background-color:  rgb(211, 211, 211);
+            color: rgb(255, 255, 255);
+        }
+        
+        
+
+        .actions {
+            display: flex;
+            gap: 5px;
+        }
+
+        .action-button {
+            padding: 8px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .action-button.view {
+    background-color: #FFA500; /* Orange fancee */
+    color: white;
+}
+
+
+        .action-button.delete {
+            background-color: #DC3545;
+            color: white;
+        }
+
+        .action-button.edit {
+            background-color: #FFC107;
+            color: white;
+        }
+
+.add-button {
+    margin-top: 20px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #ff9933;
+    color: white;
+    border-radius: 2px; 
+    display: flex;
+    align-items: center;
+     
+}
+.add-button:active {
+    background-color: #ff8c00; 
+}
+.add-button:active {
+    background-color: #ff8c00; 
+}
+.add-button:hover {
+    background-color: #ff8c00;}
+
+
+
+
+
+        .add-button .plus-icon {
+            margin-right: 5px;
+            font-size: 18px;
+        }
+
+        .school-card-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .sub-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            width: 23%;
+            text-align: center;
+            margin-right: 10px;
+            height: 50%;
+        }
+
+        .school-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+
+        .school-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .school-icon-blue {
+            color: #70a8ff;
+        }
+
+        .school-icon-bleu {
+            color: #a4b0f4;
+        }
+
+        .school-icon-red {
+            color: #ff6b6b;
+        }
+
+        .school-icon-green {
+            color: #61c080;
+        }
+
+        .school-icon-vert {
+            color: #70a8ff;
+        }
+        #addPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    border-radius: 3px; /* Minimiser le bordure radius */
+}
+#viewStudentPopup {
+	display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    border-radius: 3px;
+	
+}
+#deleteStudentPopup{
+	display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    border-radius: 3px;
+	
+}
+#editStudentPopup {
+	display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    border-radius: 3px;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+label {
+    font-weight: bold;
+}
+
+input,
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Ajouter une marge entre les éléments du formulaire */
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px; /* Ajouter une marge inférieure aux étiquettes */
+}
+
+input,
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px; /* Ajouter une marge inférieure aux champs de saisie */
+}
+
+
+input[type="submit"] {
+    background-color: #ff9933; /* Changer la couleur en orange */
+    color: #fff;
+    cursor: pointer;
+    padding: 12px; /* Ajuster le rembourrage */
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff8c00; /* Changer la couleur au survol */
+}
+      
+        .view-btn {
+        padding: 2px ;
+          cursor: pointer;
+    border: none;
+    background-color: #70a8ff;
+    color: white;
+    border-radius: 2px; 
+        }
+
+        .edit-btn {
+       
+    padding: 2px ;
+    cursor: pointer;
+    border: none;
+    background-color: #61c080;
+    color: white;
+    border-radius: 2px; 
+    
+    
+       
+           
+        }
+
+        .delete-btn {
+        padding: 2px ;
+           cursor: pointer;
+    border: none;
+    background-color: #ff6b6b;
+    color: white;
+    border-radius: 2px; 
+        }
+
+       
+        .icon-view::before {
+            content: "\1F441"; 
+            margin-right: 5px;
+        }
+
+        .icon-edit::before {
+            content: "\270E";
+            margin-right: 5px;
+        }
+
+        .icon-delete::before {
+            content: "\1F5D1"; 
+            margin-right: 5px;
+        }
+  
+   
+
+    
